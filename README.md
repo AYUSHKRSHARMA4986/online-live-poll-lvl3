@@ -2,13 +2,14 @@
 
 LivePoll is a mini end-to-end Stellar + Soroban dApp: a multi-wallet polling app backed by a deployed Soroban smart contract on Stellar Testnet, with real-time contract event sync, transaction progress feedback, basic caching, and a small automated test suite.
 
-## Level 2 Submission Checklist 
+## Level 3 Submission Checklist 
 
 - Live demo link: https://online-live-poll-liard.vercel.app/
-- Public GitHub repository : https://github.com/AYUSHKRSHARMA4986/online-live-poll
-- README with setup instructions : ✅ (DONE BELOW)
-- Minimum 2+ meaningful commits : ✅ (DONE)
-- Screenshot: wallet options available : ✅ (DONE BELOW)
+- Public GitHub repository : https://github.com/AYUSHKRSHARMA4986/online-live-poll-lvl3
+- Demo video link : https://drive.google.com/file/d/1SR8RxqQMYTR2mG-opvBFGaUaCffiQFiw/view?usp=sharing
+- README with complete documentation : ✅ (DONE BELOW)
+- Minimum 10+ meaningful commits : ✅ (DONE)
+- Screenshot showing (Mobile responsive UI , CI/CD pipeline running , Test output with 3+ passing tests) : ✅ (DONE BELOW)
 - Deployed contract address : ✅ (DONE BELOW)
 - Transaction hash of a contract call (verifiable on Stellar Explorer) : ✅ (DONE BELOW)
 
@@ -34,9 +35,25 @@ This project demonstrates:
 - See transaction phases in the UI: `preparing`, `awaiting-signature`, `pending`, `success`, and `error`
 - Refresh poll state automatically from recent on-chain contract events
 
-## Screenshot
+## Screenshots
 
-![img.png](img.png)
+### 🏠 Home Page
+![Screenshot 2026-06-18 115214.png](tempo_ss/Screenshot%202026-06-18%20115214.png)
+
+### 📝 Create Poll
+![Screenshot 2026-06-18 115544.png](tempo_ss/Screenshot%202026-06-18%20115544.png)
+
+### 🗳️ Voting Interface
+![Screenshot 2026-06-18 120110.png](tempo_ss/Screenshot%202026-06-18%20120110.png)
+
+### ⚙️ CI/CD Workflow
+![Screenshot 2026-06-18 210708.png](tempo_ss/Screenshot%202026-06-18%20210708.png)
+
+## Mobile responsive screenshots
+
+Below is a mobile view screenshot demonstrating the responsive layout on narrow screens. Replace the placeholder with a real phone-sized screenshot captured from the dev tools or a device.
+
+![Screenshot_20260618_215951_Chrome.jpg](tempo_ss/Screenshot_20260618_215951_Chrome.jpg)
 
 ## Deployed Contract
 
@@ -120,6 +137,15 @@ VITE_POLL_CONTRACT_WASM_URL=/contracts/poll_contract.wasm
 - If a wallet has not been created on Testnet yet, fund it with Friendbot first and then retry
 - The app can still read poll data without a funded wallet by using a temporary read account
 
+## Scripts
+
+- `npm run dev` starts the frontend
+- `npm run build` creates a production build
+- `npm run lint` runs ESLint
+- `npm test` runs the Node.js test suite
+- `npm run contract:build` builds the Soroban contract
+- `npm run wasm:sync` copies the compiled WASM into `public/contracts/` for the frontend to load the contract spec
+- `npm run contract:deploy` uploads and deploys the contract to testnet
 
 ## Deploy (Vercel / Netlify)
 
@@ -129,6 +155,18 @@ This is a standard Vite build.
 - Build command: `npm run build`
 - Output directory: `dist`
 - Set the env vars from the section above (at minimum `VITE_STELLAR_CONTRACT_ID` if you deploy a new contract)
+
+## Demo Video (1 minute)
+
+https://drive.google.com/file/d/1SR8RxqQMYTR2mG-opvBFGaUaCffiQFiw/view?usp=sharing
+
+Walkthrough:
+
+1. Open the deployed site and show the “Read from contract” panel updating.
+2. Connect a wallet (Freighter or any supported wallet).
+3. Create a poll (show “awaiting-signature” → “pending” → “success”).
+4. Vote on the poll and show the event feed / vote count updating.
+5. Open the contract/tx on Stellar Expert via the links in the UI.
 
 ## Project Structure
 
