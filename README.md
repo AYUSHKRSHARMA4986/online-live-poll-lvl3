@@ -71,7 +71,7 @@ Below is a mobile view screenshot demonstrating the responsive layout on narrow 
 ## Smart Contract Source
 To verify the custom logic of the LivePoll smart contract (beyond boilerplate), please review the source code and compiled WASM here:
 * **Source Code:** [poll_contract/src/lib.rs](./poll_contract/src/lib.rs)
-* **Compiled Contract:** *[poll_contract/target/wasm32v1-none/release/*.wasm](.poll_contract/target/wasm32v1-none/release/*.wasm)*
+* **Compiled Contract:** *[public/contracts/poll_contract.wasm](./public/contracts/poll_contract.wasm)*
 
 ## Live Demo
 
