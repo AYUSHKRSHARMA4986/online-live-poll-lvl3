@@ -12,6 +12,7 @@ LivePoll is a mini end-to-end Stellar + Soroban dApp: a multi-wallet polling app
 - Screenshot showing (Mobile responsive UI , CI/CD pipeline running , Test output with 3+ passing tests) : ✅ (DONE BELOW)
 - Deployed contract address : ✅ (DONE BELOW)
 - Transaction hash of a contract call (verifiable on Stellar Explorer) : ✅ (DONE BELOW)
+- 📌📌 Verification of Smart Contract Source :  ✅ (DONE BELOW)
 
 ## Submission Overview
 
@@ -68,7 +69,7 @@ Below is a mobile view screenshot demonstrating the responsive layout on narrow 
 - Sample `create_poll` tx hash: `1fd899d9a98e7b262ec7ed357add3d65e7470808d2c715bcb73a94b0b6c69e2d`
 - Stellar Expert link: https://stellar.expert/explorer/testnet/tx/1fd899d9a98e7b262ec7ed357add3d65e7470808d2c715bcb73a94b0b6c69e2d
 
-## Smart Contract Source
+## 📌📌 Smart Contract Source
 To verify the custom logic of the LivePoll smart contract (beyond boilerplate), please review the source code and compiled WASM here:
 * **Source Code:** [poll_contract/src/lib.rs](./poll_contract/src/lib.rs)
 * **Compiled Contract:** *[public/contracts/poll_contract.wasm](./public/contracts/poll_contract.wasm)*
