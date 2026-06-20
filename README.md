@@ -68,6 +68,11 @@ Below is a mobile view screenshot demonstrating the responsive layout on narrow 
 - Sample `create_poll` tx hash: `1fd899d9a98e7b262ec7ed357add3d65e7470808d2c715bcb73a94b0b6c69e2d`
 - Stellar Expert link: https://stellar.expert/explorer/testnet/tx/1fd899d9a98e7b262ec7ed357add3d65e7470808d2c715bcb73a94b0b6c69e2d
 
+## Smart Contract Source
+To verify the custom logic of the LivePoll smart contract (beyond boilerplate), please review the source code and compiled WASM here:
+* **Source Code:** [poll_contract/src/lib.rs](./poll_contract/src/lib.rs)
+* **Compiled Contract:** *[poll_contract/target/wasm32v1-none/release/*.wasm](.poll_contract/target/wasm32v1-none/release/*.wasm)*
+
 ## Live Demo
 
 https://online-live-poll-liard.vercel.app/
